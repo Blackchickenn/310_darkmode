@@ -6,8 +6,10 @@ body {
 nav {
   background-color: #a0f9ff;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding-top: 20px;
 }
 
 nav.dark {
@@ -16,6 +18,17 @@ nav.dark {
 
 .burger {
   display: none;
+}
+
+.nav--logo {
+  height: 40px;
+  object-fit: cover;
+  padding: 5px 0 0 20px;
+  /* border-top-left-radius: 50%; */
+  /* border-radius: 35% 10%; */
+}
+
+.nav--first--letter {
 }
 
 ul {
@@ -35,7 +48,7 @@ ul > li {
 
 main {
   background-color: #a0f9ff;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 main.dark {
@@ -113,6 +126,103 @@ main.dark {
 
 .nohamburger {
   display: none;
+}
+
+.hero--personal {
+  display: flex;
+  padding: 50px 20px 30px 20px;
+  justify-content: space-between;
+}
+
+/* .hero--personal--info {
+  padding-left: 20px;
+} */
+
+.hero--personal--name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.hero--personal--description,
+.about--me--description {
+  font-size: 1.3rem;
+  max-width: 400px;
+  margin: 40px 0;
+}
+
+.hero--personal--btn {
+  background-color: #212c31;
+  color: white;
+  border: none;
+  padding: 15px 38px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 27px;
+  letter-spacing: 2px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hero--personal--contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fa-facebook-square,
+.fa-linkedin,
+.fa-github-square {
+  font-size: 3.5rem;
+  color: #212c31;
+}
+
+.about--me--section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.about--me--title,
+.about--me--skills--title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+
+.about--me--skills--title {
+  margin-bottom: 25px;
+}
+
+.about--me--description {
+  letter-spacing: 1px;
+}
+
+.about--me--photo {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.about--me--skill--icons {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+}
+
+.fa-html5,
+.fa-css3,
+.fa-js-square,
+.fa-react,
+.fa-git,
+.fa-github {
+  font-size: 2rem;
 }
 
 @media (min-width: 500px) {
