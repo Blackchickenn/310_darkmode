@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+nav {
+  background-color: #a0f9ff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav.dark {
+  background-color: #212c31;
+}
+
+.burger {
+  display: none;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0 10px;
+  padding-top: 10px;
+}
+
+ul > li {
+  padding: 0 5px;
+  font-size: 1.2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+main {
+  background-color: #a0f9ff;
+  height: 100vh;
+}
+
+main.dark {
+  background-color: #212c31;
+}
+
+.hero--switch--mode {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.hero--switch-bar {
+  background-color: #212c31;
+  height: 22px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.dark .hero--switch-bar {
+  justify-content: flex-end;
+  background-color: #a0f9ff;
+}
+
+.hero--switch--btn {
+  background-color: #a0f9ff;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin: 0px 2px;
+}
+
+.dark .hero--switch--btn {
+  background-color: #212c31;
+}
+
+.fa-solid {
+  color: #37474f;
+  padding: 0 8px;
+}
+
+.dark .fa-solid {
+  color: #a0f9ff;
+}
+
+.dark li {
+  color: #a0f9ff;
+}
+
+.fa-bars,
+.fa-xmark {
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding-right: 15px;
+  margin-top: 10px;
+}
+
+.burger .fa-bars {
+  display: block;
+}
+
+.fa-xmark {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding-right: 15px;
+    margin: 15px 0 0 0;
+  }
+
+  ul li {
+    padding: 0 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: #212c31;
+  }
+
+  .dark ul li {
+    color: #a0f9ff;
+  }
+
+  .burger--cross {
+    display: none;
+  }
+}
