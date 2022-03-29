@@ -23,6 +23,7 @@ ul {
   list-style-type: none;
   padding: 0 10px;
   padding-top: 10px;
+  margin: 0;
 }
 
 ul > li {
@@ -98,11 +99,19 @@ main.dark {
   margin-top: 10px;
 }
 
-.burger .fa-bars {
-  display: block;
+.burger--cross {
+  display: flex;
 }
 
 .fa-xmark {
+  display: none;
+}
+
+.cross .fa-xmark {
+  display: block;
+}
+
+.nohamburger {
   display: none;
 }
 
@@ -111,7 +120,7 @@ main.dark {
     display: flex;
     list-style-type: none;
     padding-right: 15px;
-    margin: 15px 0 0 0;
+    margin: 0;
   }
 
   ul li {
@@ -128,5 +137,9 @@ main.dark {
 
   .burger--cross {
     display: none;
+  }
+
+  .burger {
+    display: flex;
   }
 }
