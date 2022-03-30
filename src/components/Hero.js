@@ -1,4 +1,6 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebookSquare , faLinkedin, faGithubSquare} from "@fortawesome/free-brands-svg-icons"
 
 
 export default function Hero(props){
@@ -15,13 +17,15 @@ export default function Hero(props){
                         <div className="hero--personal">
                             <div className="hero--personal--info">
                                 <p className="hero--personal--name">Marcel Madaj</p>
-                                <p className="hero--personal--description">Ex-Mechanical designer, FrontEnd WebDeveloper </p>
+                                <p className="hero--personal--description">Ex-Mechanical designer || FrontEnd WebDeveloper </p>
                                 <button className="hero--personal--btn">About me</button>   
                             </div>
                             <div className="hero--personal--contact">
-                                    <a href=""><i class="fa-brands fa-facebook-square"></i></a>
-                                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                                    <a href=""><i class="fa-brands fa-github-square"></i></a>
+                                    <a href=""><FontAwesomeIcon icon={faFacebookSquare} /></a>
+                                    <a href=""><FontAwesomeIcon icon={faLinkedin} /></a>
+                                    <a href=""><FontAwesomeIcon icon={faGithubSquare} /></a>
+                                    
+                                    
                                 </div>
                            
                             </div>

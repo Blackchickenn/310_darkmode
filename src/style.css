@@ -1,10 +1,11 @@
 body {
   margin: 0;
   font-family: "Ubuntu", sans-serif;
+  color: #212c31;
 }
 
 nav {
-  background-color: #a0f9ff;
+  background-color: #a1cee2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +48,7 @@ ul > li {
 }
 
 main {
-  background-color: #a0f9ff;
+  background-color: #a1cee2;
   /* height: 100vh; */
 }
 
@@ -80,7 +81,7 @@ main.dark {
 }
 
 .hero--switch--btn {
-  background-color: #a0f9ff;
+  background-color: #ffb100;
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -154,7 +155,8 @@ main.dark {
 
 .hero--personal--btn {
   background-color: #212c31;
-  color: white;
+  color: #ffb100;
+  font-weight: 700;
   border: none;
   padding: 15px 38px;
   font-size: 1.3rem;
@@ -186,7 +188,8 @@ main.dark {
 }
 
 .about--me--title,
-.about--me--skills--title {
+.about--me--skills--title,
+.project--title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0;
@@ -214,6 +217,7 @@ main.dark {
   display: flex;
   width: 100vw;
   justify-content: space-evenly;
+  padding-bottom: 20px;
 }
 
 .fa-html5,
@@ -222,7 +226,69 @@ main.dark {
 .fa-react,
 .fa-git,
 .fa-github {
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+.project--section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.project--section--cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.project--card {
+  width: 300px;
+  height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 50px 0;
+  border-radius: 10px;
+}
+
+.project--card img {
+  padding-top: 10px;
+  width: 90%;
+  object-fit: cover;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.project--name {
+  font-size: 1.4rem;
+}
+
+.project--link--btn {
+  background-color: #212c31;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 25px;
+  color: #ffb100;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.contact--form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10%;
+}
+
+.contact--form input,
+textarea {
+  margin: 5px 0;
+  width: 70%;
+}
+
+.contact--form--btn {
+  width: 50%;
 }
 
 @media (min-width: 500px) {
@@ -253,3 +319,10 @@ main.dark {
     display: flex;
   }
 }
+
+/* 
+color pallete:
+212c31
+a1cee2
+ffb100
+ff221f */

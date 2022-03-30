@@ -2,6 +2,9 @@ import React from "react"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import AboutMe from "./components/AboutMe"
+import Projects from "./components/Projects"
+import Contact from "./components/Contact"
+
 
 export default function App(){
     const [darkMode, setDarkMode] = React.useState (false)
@@ -30,6 +33,8 @@ export default function App(){
                     darkMode={darkMode}
                 />
                 <AboutMe />
+                <Projects />
+                <Contact />
             </div>
         )
 }
