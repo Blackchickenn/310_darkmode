@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar"
 import AboutMe from "./components/AboutMe"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
+import Footer from "./components/Footer"
 
 
 export default function App(){
@@ -19,8 +20,6 @@ export default function App(){
         setBurgerMenu(prevBurgerMenu => !prevBurgerMenu)
     }
 
-  
-
     return (
             <div>
                 <Navbar 
@@ -35,6 +34,7 @@ export default function App(){
                 <AboutMe />
                 <Projects />
                 <Contact />
+                <Footer />
             </div>
         )
 }

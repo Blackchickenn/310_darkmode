@@ -4,6 +4,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHtml5, faCss3Alt, faJsSquare, faReact, faGitSquare, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 export default function AboutMe(){
+
+    // let number = document.getElementById("number")
+    // let counter = 0
+
+    // setInterval(() => {
+    //     if (counter === 65){
+    //         clearInterval()
+    //     } else{
+    //         counter += 1
+    //         number.innerHTML = counter + "%"
+    //     }
+    // }, 30)
+
     return (
         <section className="about--me--section">
                 <p className="about--me--title">About Me</p>
@@ -15,15 +28,131 @@ export default function AboutMe(){
                 <img src={MMProfile} alt="profile-photo" className="about--me--photo"/>
                 <div>
                     <h3 className="about--me--skills--title">Skills</h3>
-                    <div className="about--me--skill--icons">
-                        <FontAwesomeIcon icon={faHtml5} className="fa-html5" color="#F06529"/>
-                        <FontAwesomeIcon icon={faCss3Alt} className="fa-css3" color="#28A4D9"/>
-                        <FontAwesomeIcon icon={faJsSquare} className="fa-js-square" color="#EFD81D"/>
-                        <FontAwesomeIcon icon={faReact} className="fa-react" color="#5ED4F4"/>
-                        <FontAwesomeIcon icon={faGitSquare} className="fa-git" color="#EC4D28"/>
-                        <FontAwesomeIcon icon={faGithub} className="fa-github" color="#6e5494"/>
+                    <div className="icon--bar">
+                        <div className="icon--bar--duo">
+                            <FontAwesomeIcon icon={faHtml5} className="fa-html5" color="#F06529"/>                  {/* HTML */}
+                            <div className="skill">
+                                <div className="outer">
+                                    <div className="inner">
+                                        <div className="number" id="number">80%</div>
+                                    </div>
+                                </div>
+                                <svg className="skill--image" width="95" height="95">
+                                    <defs>
+                                        <linearGradient id="GradientColorHtml">
+                                        <stop offset="20%" stop-color="#F06529" />
+                                        <stop offset="100%" stop-color="#212c31" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle className="circle--html" r="40" cy="47.5" cx="47.5" fill="none" stroke="url(#GradientColorHtml)" strokeWidth="15px"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="icon--bar--duo">
+                            <FontAwesomeIcon icon={faCss3Alt} className="fa-css3" color="#28A4D9"/>              {/* CSS */}
+                            <div className="skill">
+                                <div className="outer">
+                                    <div className="inner">
+                                        <div className="number" id="number">65%</div>
+                                    </div>
+                                </div>
+                                <svg className="skill--image" width="95" height="95">
+                                    <defs>
+                                        <linearGradient id="GradientColorCss">
+                                        <stop offset="20%" stop-color="#28A4D9" />
+                                        <stop offset="100%" stop-color="#212c31" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle className="circle--css" r="40" cy="47.5" cx="47.5" fill="none" stroke="url(#GradientColorCss)" strokeWidth="15px"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="icon--bar">
+                        <div className="icon--bar--duo">
+                            <FontAwesomeIcon icon={faJsSquare} className="fa-js-square" color="#EFD81D"/>                  {/* Javascript */}
+                            <div className="skill">
+                                <div className="outer">
+                                    <div className="inner">
+                                        <div className="number" id="number">70%</div>
+                                    </div>
+                                </div>
+                                <svg className="skill--image" width="95" height="95">
+                                    <defs>
+                                        <linearGradient id="GradientColorJs">
+                                        <stop offset="20%" stop-color="#EFD81D" />
+                                        <stop offset="100%" stop-color="#212c31" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle className="circle--javascript" r="40" cy="47.5" cx="47.5" fill="none" stroke="url(#GradientColorJs)" strokeWidth="15px"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="icon--bar--duo">
+                            <FontAwesomeIcon icon={faReact} className="fa-react" color="#5ED4F4"/>                     {/* React */}
+                            <div className="skill">
+                                <div className="outer">
+                                    <div className="inner">
+                                        <div className="number" id="number">45%</div>
+                                    </div>
+                                </div>
+                                <svg className="skill--image" width="95" height="95">
+                                    <defs>
+                                        <linearGradient id="GradientColorReact">
+                                        <stop offset="20%" stop-color="#5ED4F4" />
+                                        <stop offset="100%" stop-color="#212c31" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle className="circle--react" r="40" cy="47.5" cx="47.5" fill="none" stroke="url(#GradientColorReact)" strokeWidth="15px"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="icon--bar">
+                        <div className="icon--bar--duo">
+                            <FontAwesomeIcon icon={faGitSquare} className="fa-git" color="#EC4D28"/>                     {/* GIT */}
+                            <div className="skill">
+                                <div className="outer">
+                                    <div className="inner">
+                                        <div className="number" id="number">60%</div>
+                                    </div>
+                                </div>
+                                <svg className="skill--image" width="95" height="95">
+                                    <defs>
+                                        <linearGradient id="GradientColorGit">
+                                        <stop offset="20%" stop-color="#EC4D28" />
+                                        <stop offset="100%" stop-color="#212c31" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle className="circle--git" r="40" cy="47.5" cx="47.5" fill="none" stroke="url(#GradientColorGit)" strokeWidth="15px"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="icon--bar--duo">
+                            <FontAwesomeIcon icon={faGithub} className="fa-github" color="#6e5494"/>                      {/* GitHub */}
+                            <div className="skill">
+                                <div className="outer">
+                                    <div className="inner">
+                                        <div className="number" id="number">75%</div>
+                                    </div>
+                                </div>
+                                <svg className="skill--image" width="95" height="95">
+                                    <defs>
+                                        <linearGradient id="GradientColorGithub">
+                                        <stop offset="20%" stop-color="#6e5494" />
+                                        <stop offset="100%" stop-color="#212c31" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle className="circle--github" r="40" cy="47.5" cx="47.5" fill="none" stroke="url(#GradientColorGithub)" strokeWidth="15px"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
         </section>
+
+        
     )
+
+    
 }

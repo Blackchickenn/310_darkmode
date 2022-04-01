@@ -24,8 +24,6 @@ export default function Hero(props){
                                     <a href=""><FontAwesomeIcon icon={faFacebookSquare} /></a>
                                     <a href=""><FontAwesomeIcon icon={faLinkedin} /></a>
                                     <a href=""><FontAwesomeIcon icon={faGithubSquare} /></a>
-                                    
-                                    
                                 </div>
                            
                             </div>

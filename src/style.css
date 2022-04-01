@@ -2,14 +2,18 @@ body {
   margin: 0;
   font-family: "Ubuntu", sans-serif;
   color: #212c31;
+  background: url(.//images/MMDesignBackground2.png); 
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
 }
 
 nav {
-  background-color: #a1cee2;
+  /* background-color: #e3edf7; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
   padding-top: 20px;
 }
 
@@ -25,14 +29,9 @@ nav.dark {
   height: 40px;
   object-fit: cover;
   padding: 5px 0 0 20px;
-  /* border-top-left-radius: 50%; */
-  /* border-radius: 35% 10%; */
 }
 
-.nav--first--letter {
-}
-
-ul {
+ul.light {
   display: flex;
   list-style-type: none;
   padding: 0 10px;
@@ -40,7 +39,7 @@ ul {
   margin: 0;
 }
 
-ul > li {
+.nav--menu {
   padding: 0 5px;
   font-size: 1.2rem;
   font-family: "Ubuntu", sans-serif;
@@ -48,8 +47,7 @@ ul > li {
 }
 
 main {
-  background-color: #a1cee2;
-  /* height: 100vh; */
+  /* background-color: #e3edf7; */
 }
 
 main.dark {
@@ -215,9 +213,10 @@ main.dark {
 
 .about--me--skill--icons {
   display: flex;
+  flex-direction: column;
   width: 100vw;
-  justify-content: space-evenly;
-  padding-bottom: 20px;
+  align-items: flex-start;
+  padding-left: 50px;
 }
 
 .fa-html5,
@@ -227,7 +226,55 @@ main.dark {
 .fa-git,
 .fa-github {
   font-size: 2.5rem;
+  padding: 5px 0;
 }
+
+/* .about--me--skill {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.about--me--skill--outer {
+  height: 80px;
+  width: 80px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 50%;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.about--me--skill--inner {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  box-shadow: inset rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about--me--skill--number {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim 2s linear forwards;
+}
+
+.skills--svg--image {
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
 
 .project--section {
   display: flex;
@@ -273,22 +320,79 @@ main.dark {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.contact--form {
-  width: 100%;
+.contact--section {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 10%;
+  justify-content: center;
+  padding: 20px 0;
 }
 
-.contact--form input,
-textarea {
-  margin: 5px 0;
-  width: 70%;
+.contact--form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+}
+
+.input--form--name--email {
+  width: 100%;
+}
+
+.contact--form--name,
+.contact--form--email {
+  height: 25px;
+  width: 45%;
+  margin: 0 5px 15px 5px;
+  padding: 0;
+}
+
+.contact--form--subject {
+  width: 93%;
+  height: 25px;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.contact--form--message {
+  width: 93%;
+  padding: 0;
+  margin-bottom: 15px;
+  height: 100px;
 }
 
 .contact--form--btn {
-  width: 50%;
+  width: 25%;
+  height: 40px;
+  background-color: #212c31;
+  color: #ffb100;
+  border: none;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.footer--section {
+  /* background-color: #e3edf7; */
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer--nav--components {
+  list-style-type: none;
+}
+
+.footer--contact--components {
+  padding-right: 40px;
+  list-style-type: none;
+}
+
+.footer--nav--components li a,
+.footer--contact--components li a {
+  color: #212c31;
+  text-decoration: none;
+  line-height: 25px;
 }
 
 @media (min-width: 500px) {
@@ -320,9 +424,131 @@ textarea {
   }
 }
 
+.icon--bar{
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  max-width: 650px;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+
+.icon--bar--duo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon--bar .fa-html5,
+.fa-css3, .fa-js-square,
+.fa-react, .fa-git, .fa-github{
+    font-size: 5rem;
+    padding-left: 12px;
+    width: 80px;
+    height: 80px;
+}
+
+.skill{
+  width: 95px;
+  height: 95px;
+  position: relative;
+  margin-left: 10px;
+
+}
+
+.outer{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.inner{
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  box-shadow: inset rgba(0, 0, 0, 0.35) 0px 5px 15px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+circle{
+  stroke-dasharray: 251;
+  stroke-dashoffset: 251;
+  stroke-linecap: round;
+}
+
+.circle--html{
+  animation: animHtml 2s linear forwards;
+}
+
+.circle--css{
+  animation: animCss 2s linear forwards;
+}
+
+.circle--javascript{
+  animation: animJavascript 2s linear forwards;
+}
+
+.circle--react{
+  animation: animReact 2s linear forwards;
+}
+
+.circle--git{
+  animation: animGit 2s linear forwards;
+}
+
+.circle--github{
+  animation: animGithub 2s linear forwards;
+}
+
+.skill--image{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes animHtml{
+  100% {
+    stroke-dashoffset: 50;
+  }
+}
+@keyframes animCss{
+  100%{
+    stroke-dashoffset: 87;
+  }
+}
+@keyframes animJavascript{
+  100%{
+    stroke-dashoffset: 75;
+  }
+}
+@keyframes animReact{
+  100%{
+    stroke-dashoffset: 137;
+  }
+}
+@keyframes animGit{
+  100%{
+    stroke-dashoffset: 100;
+  }
+}
+@keyframes animGithub{
+  100%{
+    stroke-dashoffset: 63;
+  }
+}
+
+
 /* 
 color pallete:
 212c31
 a1cee2
 ffb100
-ff221f */
+ff221f 
+e3edf7
+*/

@@ -7,11 +7,11 @@ export default function Navbar(props){
                 <a href="https://www.w3schools.com"><img src={LogoPicture} className="nav--logo" alt="nav-logo"/></a>
                 
             <div className={props.burgerMenu ? "burger" : ""}>
-                <ul className={props.darkMode ? "dark" : ""}>
-                    <li>First</li>
-                    <li>Second</li>
-                    <li>Third</li>
-                    <li>Forth</li>
+                <ul className={props.darkMode ? "dark" : "light"}>
+                    <li className="nav--menu">First</li>
+                    <li className="nav--menu">Second</li>
+                    <li className="nav--menu">Third</li>
+                    <li className="nav--menu">Forth</li>
                 </ul>
             </div>
                 <div className="burger--cross">

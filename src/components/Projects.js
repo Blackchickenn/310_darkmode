@@ -1,8 +1,8 @@
 import React from "react"
-import ProjectImage1 from "../images/project1.jpg"
-import ProjectImage2 from "../images/project2.jpg"
-import ProjectImage3 from "../images/project3.jpg"
-import ProjectImage4 from "../images/project4.jpg"
+import ProjectImage1 from "../images/project1.png"
+import ProjectImage2 from "../images/project2.png"
+import ProjectImage3 from "../images/project3.png"
+import ProjectImage4 from "../images/project4.png"
 
 export default function Projects(){
     return (
