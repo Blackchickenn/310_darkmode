@@ -1,20 +1,20 @@
 body {
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Oswald', sans-serif;
   color: #212c31;
-  background: url(.//images/MMDesignBackground2.png); 
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
+  background: url(.//images/MMDesignBackground3.png); 
+
+
 }
 
 nav {
-  /* background-color: #e3edf7; */
+ background-color: #c9dcef;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-  padding-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px 0;
+  width: 100vw;
 }
 
 nav.dark {
@@ -31,19 +31,30 @@ nav.dark {
   padding: 5px 0 0 20px;
 }
 
+.no--nav--logo{
+  display: none;
+}
+
 ul.light {
   display: flex;
+  flex-direction: column;
   list-style-type: none;
   padding: 0 10px;
-  padding-top: 10px;
   margin: 0;
 }
 
 .nav--menu {
-  padding: 0 5px;
+  padding: 5px 20px;
   font-size: 1.2rem;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav--menu:hover{
+  background-color: #212c31;
+  color: #ffb100;
+  cursor: pointer;
 }
 
 main {
@@ -109,6 +120,7 @@ main.dark {
   cursor: pointer;
   padding-right: 15px;
   margin-top: 10px;
+  margin-right: 10px;
 }
 
 .burger--cross {
@@ -121,6 +133,7 @@ main.dark {
 
 .cross .fa-xmark {
   display: block;
+  margin-right: 10px;
 }
 
 .nohamburger {
@@ -133,22 +146,24 @@ main.dark {
   justify-content: space-between;
 }
 
-/* .hero--personal--info {
+.hero--personal--info {
   padding-left: 20px;
-} */
+}
 
 .hero--personal--name {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
   letter-spacing: 2px;
+  font-family: 'Lobster Two', cursive;
+
 }
 
 .hero--personal--description,
 .about--me--description {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   max-width: 400px;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .hero--personal--btn {
@@ -156,12 +171,20 @@ main.dark {
   color: #ffb100;
   font-weight: 700;
   border: none;
-  padding: 15px 38px;
-  font-size: 1.3rem;
+  padding: 10px 25px;
+  font-size: 1.1rem;
   cursor: pointer;
   border-radius: 27px;
   letter-spacing: 2px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-family: 'Oswald', sans-serif;
+  transition: all .7s ease-in-out;
+}
+
+.hero--personal--btn:hover{
+  background-color: #ffb100;
+  color: #212c31;
+  transform: scale(1.1);
 }
 
 .hero--personal--contact {
@@ -174,8 +197,25 @@ main.dark {
 .fa-facebook-square,
 .fa-linkedin,
 .fa-github-square {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: #212c31;
+  transition: all 0.7s ease-in-out;
+}
+
+.fa-facebook-square:hover{
+  transform: rotate3d(1, 2.0, 3.0, 330deg) scale(1.6);
+ 
+  color: #1877f2;
+}
+
+.fa-linkedin:hover{
+  transform: rotate3d(1, 2.0, 3.0, 330deg) scale(1.6);
+  color: #0077b5;
+}
+
+.fa-github-square:hover{
+  transform: rotate3d(1, 2.0, 3.0, 330deg) scale(1.6);
+  color: #6e5494;
 }
 
 .about--me--section {
@@ -187,11 +227,13 @@ main.dark {
 
 .about--me--title,
 .about--me--skills--title,
-.project--title {
+.project--title,
+.contact--title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0;
   letter-spacing: 2px;
+  font-family: 'Lobster Two', cursive;
 }
 
 .about--me--skills--title {
@@ -209,6 +251,14 @@ main.dark {
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  filter: blur(4px);
+  transition: all 0.7s linear;
+
+}
+
+.about--me--photo:hover{
+  filter: none;
+  transform: scale(1.1);
 }
 
 .about--me--skill--icons {
@@ -229,52 +279,6 @@ main.dark {
   padding: 5px 0;
 }
 
-/* .about--me--skill {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  margin: 0 auto;
-}
-
-.about--me--skill--outer {
-  height: 80px;
-  width: 80px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 50%;
-  padding-top: 10px;
-  padding-left: 10px;
-}
-
-.about--me--skill--inner {
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  box-shadow: inset rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.about--me--skill--number {
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-circle {
-  fill: none;
-  stroke: url(#GradientColor);
-  stroke-width: 20px;
-  stroke-dasharray: 472;
-  stroke-dashoffset: 472;
-  animation: anim 2s linear forwards;
-}
-
-.skills--svg--image {
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
 
 .project--section {
   display: flex;
@@ -295,6 +299,13 @@ circle {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 50px 0;
   border-radius: 10px;
+  background-color: #c9dcef;
+  padding-bottom: 10px;
+  transition: all 1.2s ease-out;
+}
+
+.project--card:hover{
+  transform: scale(1.15);
 }
 
 .project--card img {
@@ -309,6 +320,11 @@ circle {
   font-size: 1.4rem;
 }
 
+.project--text {
+  margin: 0;
+  padding: 0 20px;
+}
+
 .project--link--btn {
   background-color: #212c31;
   display: inline-block;
@@ -318,12 +334,23 @@ circle {
   font-size: 1.2rem;
   margin-bottom: 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 1s ease-in-out;
+}
+
+.project--link--btn:hover {
+  background-color: #ffb100;
+  color: #212c31;
+  font-weight: 700;
+  transform: scale(1.1);
+
 }
 
 .contact--section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 20px 0;
+  text-align: center;
+  padding: 50px 0;
 }
 
 .contact--form {
@@ -332,7 +359,9 @@ circle {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 500px;
+  /* width: 500px; */
+  max-width: 600px;
+  margin-top: 20px;
 }
 
 .input--form--name--email {
@@ -345,6 +374,8 @@ circle {
   width: 45%;
   margin: 0 5px 15px 5px;
   padding: 0;
+  border: 1px solid #c9dcef;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .contact--form--subject {
@@ -352,13 +383,17 @@ circle {
   height: 25px;
   padding: 0;
   margin-bottom: 15px;
+  border: 1px solid #c9dcef;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .contact--form--message {
   width: 93%;
   padding: 0;
   margin-bottom: 15px;
-  height: 100px;
+  height: 150px;
+  border: 1px solid #c9dcef;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .contact--form--btn {
@@ -368,15 +403,30 @@ circle {
   color: #ffb100;
   border: none;
   font-size: 1.2rem;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 20px;
+  transition: all 1s;
+  font-family: 'Oswald', sans-serif;
+}
+
+.contact--form--btn:hover{
+  background-color: #ffb100;
+  color: #212c31;
+  letter-spacing: 4px;
+  cursor: pointer;
 }
 
 .footer--section {
-  /* background-color: #e3edf7; */
+
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: #c9dcef;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .footer--nav--components {
@@ -384,7 +434,7 @@ circle {
 }
 
 .footer--contact--components {
-  padding-right: 40px;
+  padding-right: 60px;
   list-style-type: none;
 }
 
@@ -394,6 +444,12 @@ circle {
   text-decoration: none;
   line-height: 25px;
 }
+.footer--nav--components li a:hover,
+.footer--contact--components li a:hover{
+  background-color: #212c31;
+  color: #ffb100;
+}
+
 
 @media (min-width: 500px) {
   ul {
@@ -417,6 +473,7 @@ circle {
 
   .burger--cross {
     display: none;
+  
   }
 
   .burger {
@@ -546,9 +603,11 @@ circle{
 
 /* 
 color pallete:
-212c31
-a1cee2
-ffb100
-ff221f 
-e3edf7
+212c31 - main black
+ffb100 - orange
+
+#e3edf7 - blue
+#d6e5f3 - more blue
+#c9dcef - more blue
 */
+

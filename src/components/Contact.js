@@ -29,6 +29,7 @@ export default function Contact (){
     
     return (
         <section className="contact--section">
+            <h2 className="contact--title">Contact me</h2>
             <form ref={refForm} onSubmit={sendEmail} className="contact--form">
                 <div className="input--form--name--email">
                     <input type="text" name="name" placeholder="Name" required className="contact--form--name"/>
