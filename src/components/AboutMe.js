@@ -3,22 +3,13 @@ import MMProfile from "../images/MMProfile.PNG"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHtml5, faCss3Alt, faJsSquare, faReact, faGitSquare, faGithub } from "@fortawesome/free-brands-svg-icons"
 
-export default function AboutMe(){
+export default function AboutMe(props){
 
-    // let number = document.getElementById("number")
-    // let counter = 0
-
-    // setInterval(() => {
-    //     if (counter === 65){
-    //         clearInterval()
-    //     } else{
-    //         counter += 1
-    //         number.innerHTML = counter + "%"
-    //     }
-    // }, 30)
+    //about--me--section
 
     return (
-        <section className="about--me--section">
+        <section className={props.darkMode ? "dark" : ""}>
+            <div className="about--me--section">
                 <p className="about--me--title">About Me</p>
                 <p className="about--me--description">Cupcake ipsum dolor sit amet macaroon jelly-o. Pie cupcake cupcake icing brownie tiramisu chocolate jelly. Halvah cotton candy cake cupcake jelly chupa chups pie toffee bear claw. Tootsie roll danish chupa chups powder croissant. 
                 <br></br>
@@ -41,7 +32,7 @@ export default function AboutMe(){
                                     <defs>
                                         <linearGradient id="GradientColorHtml">
                                         <stop offset="20%" stop-color="#F06529" />
-                                        <stop offset="100%" stop-color="#212c31" />
+                                        <stop offset="100%" stop-color="#f38759" />
                                         </linearGradient>
                                     </defs>
                                     <circle className="circle--html" r="40" cy="47.5" cx="47.5" fill="none" stroke="url(#GradientColorHtml)" strokeWidth="15px"/>
@@ -60,7 +51,7 @@ export default function AboutMe(){
                                     <defs>
                                         <linearGradient id="GradientColorCss">
                                         <stop offset="20%" stop-color="#28A4D9" />
-                                        <stop offset="100%" stop-color="#212c31" />
+                                        <stop offset="100%" stop-color="#53b6e1" />
                                         </linearGradient>
                                     </defs>
                                     <circle className="circle--css" r="40" cy="47.5" cx="47.5" fill="none" stroke="url(#GradientColorCss)" strokeWidth="15px"/>
@@ -81,7 +72,7 @@ export default function AboutMe(){
                                     <defs>
                                         <linearGradient id="GradientColorJs">
                                         <stop offset="20%" stop-color="#EFD81D" />
-                                        <stop offset="100%" stop-color="#212c31" />
+                                        <stop offset="100%" stop-color="#f2e04d" />
                                         </linearGradient>
                                     </defs>
                                     <circle className="circle--javascript" r="40" cy="47.5" cx="47.5" fill="none" stroke="url(#GradientColorJs)" strokeWidth="15px"/>
@@ -100,7 +91,7 @@ export default function AboutMe(){
                                     <defs>
                                         <linearGradient id="GradientColorReact">
                                         <stop offset="20%" stop-color="#5ED4F4" />
-                                        <stop offset="100%" stop-color="#212c31" />
+                                        <stop offset="100%" stop-color="#8ee1f7" />
                                         </linearGradient>
                                     </defs>
                                     <circle className="circle--react" r="40" cy="47.5" cx="47.5" fill="none" stroke="url(#GradientColorReact)" strokeWidth="15px"/>
@@ -121,7 +112,7 @@ export default function AboutMe(){
                                     <defs>
                                         <linearGradient id="GradientColorGit">
                                         <stop offset="20%" stop-color="#EC4D28" />
-                                        <stop offset="100%" stop-color="#212c31" />
+                                        <stop offset="100%" stop-color="#f07457" />
                                         </linearGradient>
                                     </defs>
                                     <circle className="circle--git" r="40" cy="47.5" cx="47.5" fill="none" stroke="url(#GradientColorGit)" strokeWidth="15px"/>
@@ -140,7 +131,7 @@ export default function AboutMe(){
                                     <defs>
                                         <linearGradient id="GradientColorGithub">
                                         <stop offset="20%" stop-color="#6e5494" />
-                                        <stop offset="100%" stop-color="#212c31" />
+                                        <stop offset="100%" stop-color="#886ead" />
                                         </linearGradient>
                                     </defs>
                                     <circle className="circle--github" r="40" cy="47.5" cx="47.5" fill="none" stroke="url(#GradientColorGithub)" strokeWidth="15px"/>
@@ -149,8 +140,8 @@ export default function AboutMe(){
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
-
         
     )
 

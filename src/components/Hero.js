@@ -9,16 +9,16 @@ export default function Hero(props){
             <main className={props.darkMode ? "dark" : ""}>
                         <div className="hero--switch--mode">
                             <i className="fa-solid fa-sun"></i>
-                                <div className="hero--switch-bar" onClick={props.toggleDarkMode}>
+                                <div className="hero--switch--bar" onClick={props.toggleDarkMode}>                       
                                     <div className="hero--switch--btn" ></div>
                                 </div>
                             <i className="fa-solid fa-moon"></i>
                         </div>
                         <div className="hero--personal">
                             <div className="hero--personal--info">
-                                <p className="hero--personal--name">Marcel Madaj</p>
+                                <p className="hero--personal--name">I`m <span className="hero--personal--name--style`">Marcel Madaj</span></p>
                                 <p className="hero--personal--description">Ex-Mechanical Engineer || FrontEnd WebDeveloper </p>
-                                <button className="hero--personal--btn">About me</button>   
+                                <button className="hero--personal--btn">About Me</button>   
                             </div>
                             <div className="hero--personal--contact">
                                     <a href=""><FontAwesomeIcon icon={faFacebookSquare} /></a>
@@ -30,3 +30,6 @@ export default function Hero(props){
                     </main>
             )
 }
+
+
+// hero--switch-bar

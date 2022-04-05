@@ -1,7 +1,7 @@
 import React, { useRef } from "react"
 import emailjs from "@emailjs/browser"
 
-export default function Contact (){
+export default function Contact (props){
 
 
     const refForm = useRef()
@@ -28,17 +28,19 @@ export default function Contact (){
     }
     
     return (
-        <section className="contact--section">
-            <h2 className="contact--title">Contact me</h2>
-            <form ref={refForm} onSubmit={sendEmail} className="contact--form">
-                <div className="input--form--name--email">
-                    <input type="text" name="name" placeholder="Name" required className="contact--form--name"/>
-                    <input type="email" name="email" placeholder="Email" required className="contact--form--email"/>
-                </div>
-                <input type="text" name="subject" placeholder="Subject" required className="contact--form--subject"/>
-                <textarea  name="message" placeholder="Message" required className="contact--form--message" />
-                <input type="submit" value="SEND" className="contact--form--btn"/>
-            </form>
+        <section className={props.darkMode ? "dark" : ""}>
+            <div className="contact--section">
+                <h2 className="contact--title">Contact me</h2>
+                <form ref={refForm} onSubmit={sendEmail} className="contact--form">
+                    <div className="input--form--name--email">
+                        <input type="text" name="name" placeholder="Name" required className="contact--form--name"/>
+                        <input type="email" name="email" placeholder="Email" required className="contact--form--email"/>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" required className="contact--form--subject"/>
+                    <textarea  name="message" placeholder="Message" required className="contact--form--message" />
+                    <input type="submit" value="SEND" className="contact--form--btn"/>
+                </form>
+            </div>
         </section>
     )
 }

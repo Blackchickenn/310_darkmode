@@ -2,9 +2,9 @@ body {
   margin: 0;
   font-family: 'Oswald', sans-serif;
   color: #212c31;
-  background: url(.//images/MMDesignBackground3.png); 
-
-
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* background: url(.//images/MMDesignBackground3.png);  */
 }
 
 nav {
@@ -15,31 +15,55 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 20px 0;
   width: 100vw;
+  position: fixed;
+  z-index: 1;
+  /* overflow: visible; */
 }
 
 nav.dark {
+  /* background-color: #212c31; */
   background-color: #212c31;
+  /* justify-content: space-between; */
 }
 
 .burger {
   display: none;
 }
 
-.nav--logo {
-  height: 40px;
-  object-fit: cover;
+a.nav--logo,
+a.nav--logo--dark {
   padding: 5px 0 0 20px;
 }
 
-.no--nav--logo{
+.nav--logo img,
+.nav--logo--dark img{
+  height: 40px;
+}
+
+.nav--logo--dark{
   display: none;
 }
 
-ul.light {
+.dark .nav--logo{
+  display: none;
+}
+
+.dark .nav--logo--dark{
+  display: block;
+}
+
+
+.no--nav--logo,
+.no--nav--logo--dark{
+  display: none;
+}
+
+ul.light,
+ul.dark {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  padding: 0 10px;
+  padding: 0 10px 0 100px;
   margin: 0;
 }
 
@@ -57,12 +81,25 @@ ul.light {
   cursor: pointer;
 }
 
+.dark .nav--menu{
+  list-style-type: none;
+  /* color: #e3edf7; */
+  color: #a0f9ff;
+}
+
+.dark .nav--menu:hover{
+  background-color: #ffb100;
+  color: #212c31;
+}
+
 main {
-  /* background-color: #e3edf7; */
+  background-color: #e3edf7;
+  width: 100vw;
+  padding-top: 100px;
 }
 
 main.dark {
-  background-color: #212c31;
+  background-color: #36474f;
 }
 
 .hero--switch--mode {
@@ -73,7 +110,7 @@ main.dark {
   padding-right: 10px;
 }
 
-.hero--switch-bar {
+.hero--switch--bar {
   background-color: #212c31;
   height: 22px;
   width: 50px;
@@ -84,8 +121,9 @@ main.dark {
   cursor: pointer;
 }
 
-.dark .hero--switch-bar {
+.dark .hero--switch--bar {
   justify-content: flex-end;
+  /* background-color: #e3edf7; */
   background-color: #a0f9ff;
 }
 
@@ -101,12 +139,18 @@ main.dark {
   background-color: #212c31;
 }
 
-.fa-solid {
+.fa-sun, .fa-moon {
   color: #37474f;
   padding: 0 8px;
 }
 
-.dark .fa-solid {
+.dark .fa-sun, .dark .fa-moon {
+  /* color: #e3edf7 */
+  color: #a0f9ff;
+}
+
+.dark .fa-bars {
+  /* color: #e3edf7; */
   color: #a0f9ff;
 }
 
@@ -134,6 +178,11 @@ main.dark {
 .cross .fa-xmark {
   display: block;
   margin-right: 10px;
+  color: #212c31;
+}
+
+.dark .fa-xmark {
+  color: #a0f9ff;
 }
 
 .nohamburger {
@@ -142,7 +191,7 @@ main.dark {
 
 .hero--personal {
   display: flex;
-  padding: 50px 20px 30px 20px;
+  padding: 30px 20px;
   justify-content: space-between;
 }
 
@@ -156,7 +205,24 @@ main.dark {
   margin: 0;
   letter-spacing: 2px;
   font-family: 'Lobster Two', cursive;
+}
 
+.hero--personal--name--style{
+  background-color: #212c31;
+  color: #ffb100;
+  padding: 4px 15px;
+  border-radius: 15px 5px;
+}
+
+.dark .hero--personal--name--style{
+  background-color: #ffb100;
+  color: #212c31;
+}
+
+.dark .hero--personal--name,
+.dark .hero--personal--description{
+  /* color: #c9dcef; */
+  color: #a0f9ff;
 }
 
 .hero--personal--description,
@@ -169,22 +235,33 @@ main.dark {
 .hero--personal--btn {
   background-color: #212c31;
   color: #ffb100;
-  font-weight: 700;
   border: none;
-  padding: 10px 25px;
+  padding: 12px 40px;
   font-size: 1.1rem;
   cursor: pointer;
-  border-radius: 27px;
+  border-radius: 5px;
   letter-spacing: 2px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   font-family: 'Oswald', sans-serif;
-  transition: all .7s ease-in-out;
+  transition: all 1s linear;
 }
 
 .hero--personal--btn:hover{
   background-color: #ffb100;
   color: #212c31;
-  transform: scale(1.1);
+  transform: scale(1.03);
+}
+
+.dark .hero--personal--btn{
+  /* background-color: #c9dcef; */
+  background-color: #a0f9ff;
+  color: #212c31;
+}
+
+.dark .hero--personal--btn:hover{
+  background-color: #ffb100;
+  color: #212c31;
+  transform: scale(1.03);
 }
 
 .hero--personal--contact {
@@ -200,6 +277,13 @@ main.dark {
   font-size: 2.5rem;
   color: #212c31;
   transition: all 0.7s ease-in-out;
+}
+
+.dark .fa-facebook-square,
+.dark .fa-linkedin,
+.dark .fa-github-square{
+  /* color: #c9dcef; */
+  color: #a0f9ff;
 }
 
 .fa-facebook-square:hover{
@@ -223,6 +307,13 @@ main.dark {
   flex-direction: column;
   text-align: center;
   align-items: center;
+  background: url(./images/MMDesignBackground3.png);
+  width: 100vw;
+}
+
+.dark .about--me--section{
+  /* background-color: #36474f; */
+  background: url(./images/MMDesignBackgroundDark.png);
 }
 
 .about--me--title,
@@ -236,12 +327,25 @@ main.dark {
   font-family: 'Lobster Two', cursive;
 }
 
+.dark .about--me--title,
+.dark .about--me--skills--title,
+.dark .project--title,
+.dark .contact--title{
+  /* color: #c9dcef; */
+  color: #a0f9ff;
+}
+
 .about--me--skills--title {
   margin-bottom: 25px;
 }
 
 .about--me--description {
   letter-spacing: 1px;
+}
+
+.dark .about--me--description {
+  /* color: #c9dcef; */
+  color: #a0f9ff;
 }
 
 .about--me--photo {
@@ -285,6 +389,13 @@ main.dark {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  background: url(./images/MMDesignBackground3.png);
+  width: 100vw;
+}
+
+.dark .project--section {
+  /* background-color: #36474f; */
+  background: url(./images/MMDesignBackgroundDark.png);
 }
 
 .project--section--cards {
@@ -305,7 +416,13 @@ main.dark {
 }
 
 .project--card:hover{
-  transform: scale(1.15);
+  transform: scale(1.1);
+}
+
+.dark .project--card {
+  background-color: #212c31;
+  /* color: #e3edf7; */
+  color: #a0f9ff;
 }
 
 .project--card img {
@@ -334,15 +451,22 @@ main.dark {
   font-size: 1.2rem;
   margin-bottom: 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
 .project--link--btn:hover {
   background-color: #ffb100;
   color: #212c31;
-  font-weight: 700;
-  transform: scale(1.1);
+}
 
+.dark .project--link--btn {
+  /* background-color: #e3edf7; */
+  background-color: #a0f9ff;
+  color: #212c31;
+}
+
+.dark .project--link--btn:hover{
+  background-color: #ffb100;
 }
 
 .contact--section {
@@ -350,7 +474,14 @@ main.dark {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 50px 0;
+  padding-bottom: 50px;
+  background-color: #e3edf7;
+  width: 100vw;
+  /* background: url(./images/MMDesignBackground3.png); */
+}
+
+.dark .contact--section{
+  background-color: #36474f;
 }
 
 .contact--form {
@@ -359,8 +490,7 @@ main.dark {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* width: 500px; */
-  max-width: 600px;
+  max-width: 500px;
   margin-top: 20px;
 }
 
@@ -414,11 +544,21 @@ main.dark {
   background-color: #ffb100;
   color: #212c31;
   letter-spacing: 4px;
+  font-weight: 700;
   cursor: pointer;
 }
 
-.footer--section {
+.dark .contact--form--btn{
+  /* background-color: #e3edf7 ; */
+  background-color: #a0f9ff ;
+  color: #212c31;
+}
 
+.dark .contact--form--btn:hover{
+  background-color: #ffb100;
+}
+
+.footer--section {
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
@@ -427,6 +567,11 @@ main.dark {
   background-color: #c9dcef;
   font-weight: 700;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 100vw;
+}
+
+.dark .footer--section{
+  background-color: #212c31;
 }
 
 .footer--nav--components {
@@ -450,8 +595,25 @@ main.dark {
   color: #ffb100;
 }
 
+.dark .footer--nav--components li a,
+.dark .footer--contact--components li a {
+  /* color: #e3edf7 ; */
+  color: #a0f9ff ;
+}
+
+.dark .footer--nav--components li a:hover,
+.dark .footer--contact--components li a:hover{
+  background-color: #ffb100;
+ color: #212c31;
+}
 
 @media (min-width: 500px) {
+  a.nav--logo,
+  a.nav--logo--dark{
+    padding-left: 50px;
+  }
+
+
   ul {
     display: flex;
     list-style-type: none;
@@ -467,6 +629,16 @@ main.dark {
     color: #212c31;
   }
 
+  ul.light,
+  ul.dark{
+    flex-direction: row;
+    padding-right: 50px;
+  }
+
+  .nav--menu{
+    margin: 0 15px;
+  }
+
   .dark ul li {
     color: #a0f9ff;
   }
@@ -478,6 +650,17 @@ main.dark {
 
   .burger {
     display: flex;
+  }
+
+  .hero--personal{
+    justify-content: left;
+  }
+
+  .hero--personal--info{
+    padding-left: 150px;
+  }
+  .hero--personal--contact{
+    padding-left: 100px;
   }
 }
 
@@ -531,6 +714,10 @@ main.dark {
   justify-content: center;
   align-items: center;
 
+}
+
+.dark .number {
+  color: #a0f9ff;
 }
 
 circle{
@@ -603,11 +790,16 @@ circle{
 
 /* 
 color pallete:
-212c31 - main black
+#212c31 - main dark
+#2f3e45 - main lighter dark
+#36474f - main lighter dark
+
 ffb100 - orange
 
 #e3edf7 - blue
 #d6e5f3 - more blue
 #c9dcef - more blue
+
+a0f9ff - neon blue
 */
 

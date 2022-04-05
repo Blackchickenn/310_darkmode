@@ -31,10 +31,18 @@ export default function App(){
                     toggleDarkMode={toggleDarkMode}
                     darkMode={darkMode}
                 />
-                <AboutMe />
-                <Projects />
-                <Contact />
-                <Footer />
+                <AboutMe 
+                    darkMode={darkMode}
+                />
+                <Projects
+                    darkMode={darkMode}
+                />
+                <Contact
+                    darkMode={darkMode}
+                />
+                <Footer
+                    darkMode={darkMode}
+                />
             </div>
         )
 }
