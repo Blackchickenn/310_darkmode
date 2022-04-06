@@ -9,7 +9,7 @@ import Footer from "./components/Footer"
 
 export default function App(){
     const [darkMode, setDarkMode] = React.useState (false)
-    const [burgerMenu, setBurgerMenu] = React.useState (false)
+    const [burgerMenu, setBurgerMenu] = React.useState (true)
     
 
     function toggleDarkMode(){

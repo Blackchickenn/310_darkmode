@@ -16,7 +16,7 @@ export default function Hero(props){
                         </div>
                         <div className="hero--personal">
                             <div className="hero--personal--info">
-                                <p className="hero--personal--name">I`m <span className="hero--personal--name--style`">Marcel Madaj</span></p>
+                                <p className="hero--personal--name">I`m <span className="hero--personal--name--style">Marcel Madaj</span></p>
                                 <p className="hero--personal--description">Ex-Mechanical Engineer || FrontEnd WebDeveloper </p>
                                 <button className="hero--personal--btn">About Me</button>   
                             </div>

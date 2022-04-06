@@ -72,7 +72,7 @@ ul.dark {
   font-size: 1.2rem;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s linear;
 }
 
 .nav--menu:hover{
@@ -107,7 +107,7 @@ main.dark {
   justify-content: flex-end;
   align-items: center;
   padding-top: 10px;
-  padding-right: 10px;
+  padding-right: 30px;
 }
 
 .hero--switch--bar {
@@ -473,6 +473,7 @@ main.dark {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   padding-bottom: 50px;
   background-color: #e3edf7;
@@ -491,6 +492,7 @@ main.dark {
   align-items: center;
   text-align: center;
   max-width: 500px;
+  width: 90vw;
   margin-top: 20px;
 }
 
@@ -502,10 +504,19 @@ main.dark {
 .contact--form--email {
   height: 25px;
   width: 45%;
-  margin: 0 5px 15px 5px;
+  margin-bottom: 15px;
   padding: 0;
-  border: 1px solid #c9dcef;
+  border: 1px solid #95badf;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #ffeadd;
+}
+
+.contact--form--name{
+  margin-right: 6px;
+}
+
+.contact--form--email{
+  margin-left: 6px;
 }
 
 .contact--form--subject {
@@ -513,8 +524,9 @@ main.dark {
   height: 25px;
   padding: 0;
   margin-bottom: 15px;
-  border: 1px solid #c9dcef;
+  border: 1px solid #95badf;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #ffeadd;
 }
 
 .contact--form--message {
@@ -522,8 +534,9 @@ main.dark {
   padding: 0;
   margin-bottom: 15px;
   height: 150px;
-  border: 1px solid #c9dcef;
+  border: 1px solid #95badf;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #ffeadd;
 }
 
 .contact--form--btn {
@@ -607,62 +620,7 @@ main.dark {
  color: #212c31;
 }
 
-@media (min-width: 500px) {
-  a.nav--logo,
-  a.nav--logo--dark{
-    padding-left: 50px;
-  }
 
-
-  ul {
-    display: flex;
-    list-style-type: none;
-    padding-right: 15px;
-    margin: 0;
-  }
-
-  ul li {
-    padding: 0 10px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    font-weight: 700;
-    color: #212c31;
-  }
-
-  ul.light,
-  ul.dark{
-    flex-direction: row;
-    padding-right: 50px;
-  }
-
-  .nav--menu{
-    margin: 0 15px;
-  }
-
-  .dark ul li {
-    color: #a0f9ff;
-  }
-
-  .burger--cross {
-    display: none;
-  
-  }
-
-  .burger {
-    display: flex;
-  }
-
-  .hero--personal{
-    justify-content: left;
-  }
-
-  .hero--personal--info{
-    padding-left: 150px;
-  }
-  .hero--personal--contact{
-    padding-left: 100px;
-  }
-}
 
 .icon--bar{
   display: flex;
@@ -754,6 +712,95 @@ circle{
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media (min-width: 500px) {
+  a.nav--logo,
+  a.nav--logo--dark{
+    padding-left: 50px;
+  }
+
+
+  /* ul {
+    display: flex;
+    list-style-type: none;
+    padding-right: 15px;
+    margin: 0;
+  }
+
+  ul li {
+    padding: 0 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: #212c31;
+  } */
+
+  ul.light,
+  ul.dark{
+    flex-direction: row;
+    padding-right: 50px;
+  }
+
+  .nav--menu{
+    margin: 0 15px;
+  }
+
+  .dark ul li {
+    color: #a0f9ff;
+  }
+
+  .burger--cross {
+    display: none;
+  
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .hero--personal{
+    justify-content: left;
+  }
+
+  .hero--personal--info{
+    padding-left: 150px;
+  }
+  .hero--personal--contact{
+    padding-left: 200px;
+  }
+
+  .hero--personal--btn{
+  margin-top: 20px;
+  }
+  
+  .fa-facebook-square,
+  .fa-linkedin,
+  .fa-github-square {
+  font-size: 3.2rem;
+  padding: 10px;
+  }
+  .about--me--section--info{
+    display: flex;
+    width: 90vw;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .about--me--description {
+    font-size: 1.3rem;
+    max-width: 700px;
+  }
+  .icon--bar--duo{
+    width: 300px;
+    justify-content: space-evenly;
+  }
+  .footer--nav--menu{
+    padding-left: 50px;
+  }
+  .footer--contact--info{
+    padding-right: 50px;
+  }
 }
 
 @keyframes animHtml{

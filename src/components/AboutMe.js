@@ -10,13 +10,18 @@ export default function AboutMe(props){
     return (
         <section className={props.darkMode ? "dark" : ""}>
             <div className="about--me--section">
-                <p className="about--me--title">About Me</p>
-                <p className="about--me--description">Cupcake ipsum dolor sit amet macaroon jelly-o. Pie cupcake cupcake icing brownie tiramisu chocolate jelly. Halvah cotton candy cake cupcake jelly chupa chups pie toffee bear claw. Tootsie roll danish chupa chups powder croissant. 
-                <br></br>
-                <br></br>
-                Cupcake ipsum dolor sit amet candy canes. Cotton candy chocolate bar lemon drops pie lemon drops danish pudding. Gummi bears lollipop cake toffee lemon drops sesame snaps.
-                </p>
-                <img src={MMProfile} alt="profile-photo" className="about--me--photo"/>
+                {/* <p className="about--me--title">About Me</p> */}
+                    <div className="about--me--section--info">
+                        <div className="about--me--main">
+                            <p className="about--me--title">About Me</p>    
+                            <p className="about--me--description">Cupcake ipsum dolor sit amet macaroon jelly-o. Pie cupcake cupcake icing brownie tiramisu chocolate jelly. Halvah cotton candy cake cupcake jelly chupa chups pie toffee bear claw. Tootsie roll danish chupa chups powder croissant. 
+                            <br></br>
+                            <br></br>
+                            Cupcake ipsum dolor sit amet candy canes. Cotton candy chocolate bar lemon drops pie lemon drops danish pudding. Gummi bears lollipop cake toffee lemon drops sesame snaps.
+                            </p>
+                        </div>
+                        <img src={MMProfile} alt="profile-photo" className="about--me--photo"/>
+                    </div>
                 <div>
                     <h3 className="about--me--skills--title">Skills</h3>
                     <div className="icon--bar">
