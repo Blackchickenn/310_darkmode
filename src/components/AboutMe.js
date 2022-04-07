@@ -13,7 +13,7 @@ export default function AboutMe(props){
                 {/* <p className="about--me--title">About Me</p> */}
                     <div className="about--me--section--info">
                         <div className="about--me--main">
-                            <p className="about--me--title">About Me</p>    
+                            <p className="about--me--title" id="aboutme">About Me</p>    
                             <p className="about--me--description">Cupcake ipsum dolor sit amet macaroon jelly-o. Pie cupcake cupcake icing brownie tiramisu chocolate jelly. Halvah cotton candy cake cupcake jelly chupa chups pie toffee bear claw. Tootsie roll danish chupa chups powder croissant. 
                             <br></br>
                             <br></br>
@@ -23,7 +23,7 @@ export default function AboutMe(props){
                         <img src={MMProfile} alt="profile-photo" className="about--me--photo"/>
                     </div>
                 <div>
-                    <h3 className="about--me--skills--title">Skills</h3>
+                    <h3 className="about--me--skills--title" id="skills">Skills</h3>
                     <div className="icon--bar">
                         <div className="icon--bar--duo">
                             <FontAwesomeIcon icon={faHtml5} className="fa-html5" color="#F06529"/>                  {/* HTML */}

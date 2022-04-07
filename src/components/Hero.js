@@ -1,6 +1,7 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebookSquare , faLinkedin, faGithubSquare} from "@fortawesome/free-brands-svg-icons"
+import Typewriter from "typewriter-effect"
 
 
 export default function Hero(props){
@@ -16,20 +17,30 @@ export default function Hero(props){
                         </div>
                         <div className="hero--personal">
                             <div className="hero--personal--info">
-                                <p className="hero--personal--name">I`m <span className="hero--personal--name--style">Marcel Madaj</span></p>
+                                <p className="hero--personal--name">I`m 
+                                        <Typewriter className="hero--personal--name--style"
+                                        onInit={(typewriter) => {
+                                            typewriter
+                                                .typeString("Marcel Madaj")
+                                                .pauseFor(2000)
+                                                .deleteAll()
+                                                .pauseFor(2000)
+                                                .typeString("Marcel Madaj")
+                                                .start()
+                                            }}
+                                        />
+                                   
+                                </p>
                                 <p className="hero--personal--description">Ex-Mechanical Engineer || FrontEnd WebDeveloper </p>
-                                <button className="hero--personal--btn">About Me</button>   
+                                <a href=".html#contact"><button className="hero--personal--btn">Contact Me</button></a>   
                             </div>
                             <div className="hero--personal--contact">
-                                    <a href=""><FontAwesomeIcon icon={faFacebookSquare} /></a>
-                                    <a href=""><FontAwesomeIcon icon={faLinkedin} /></a>
-                                    <a href=""><FontAwesomeIcon icon={faGithubSquare} /></a>
+                                    <a href="https://www.facebook.com" target="_blank"><FontAwesomeIcon icon={faFacebookSquare} /></a>
+                                    <a href="https://www.linkedin.com" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a>
+                                    <a href="https://github.com" target="_blank"><FontAwesomeIcon icon={faGithubSquare} /></a>
                                 </div>
-                           
                             </div>
                     </main>
             )
+            
 }
-
-
-// hero--switch-bar

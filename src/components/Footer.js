@@ -7,32 +7,32 @@ export default function Footer(props){
                 <div className="footer--nav--menu">
                     <ul className="footer--nav--components">
                         <li>
-                            <a href="">Home</a>
+                            <a href=".html#logo">Home</a>
                         </li>
                         <li>
-                            <a href="">First</a>
+                            <a href="http://example.com#aboutme">About Me</a>
                         </li>
                         <li>
-                            <a href="">Second</a>
+                            <a href=".html#skills">Skills</a>
                         </li>
                         <li>
-                            <a href="">Third</a>
+                            <a href=".html#projects">Projects</a>
                         </li>
                         <li>
-                            <a href="">Fourth</a>
+                            <a href=".html#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
                 <div className="footer--contact--info">
                     <ul className="footer--contact--components">
                         <li>
-                            <a href="">First Last Name</a>
+                            <a href="">Marcel Madaj</a>
                         </li>
                         <li>
-                            <a href="">Mobile number</a>
+                            <a href="">+421 908 xxx zzz</a>
                         </li>
                         <li>
-                            <a href="">Email</a>
+                            <a href="">MMDesign@gmail.com</a>
                         </li>
                     </ul>
                 </div>

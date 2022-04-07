@@ -8,7 +8,7 @@ export default function Projects(props){
     return (
         <section className={props.darkMode ? "dark" : ""}>
             <div className="project--section">
-                <h2 className="project--title">Projects</h2>
+                <h2 className="project--title" id="projects">Projects</h2>
                 <div className="project--section--cards">
                 <div className="project--card">
                     <img src={ProjectImage1}/>

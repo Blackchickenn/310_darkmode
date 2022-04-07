@@ -67,28 +67,41 @@ ul.dark {
   margin: 0;
 }
 
+.light a{
+  text-decoration: none;
+  color: #212c31;
+}
+
+.dark a{
+  text-decoration: none;
+}
+
 .nav--menu {
   padding: 5px 20px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  transition: all 0.2s linear;
+  transition: all 0.4s linear;
+  background: linear-gradient(to left, #c9dcef 50%, #212c31 50%) right;
+  background-size: 200%;
 }
 
 .nav--menu:hover{
-  background-color: #212c31;
+  background-position: left;
   color: #ffb100;
   cursor: pointer;
 }
 
 .dark .nav--menu{
   list-style-type: none;
-  /* color: #e3edf7; */
   color: #a0f9ff;
+  background: linear-gradient(to left, #212c31 50%, #ffb100 50%) right;
+  background-size: 200%;
 }
 
 .dark .nav--menu:hover{
-  background-color: #ffb100;
+  /* background-color: #ffb100; */
+  background-position: left;
   color: #212c31;
 }
 
@@ -208,10 +221,10 @@ main.dark {
 }
 
 .hero--personal--name--style{
-  background-color: #212c31;
+  /* background-color: #212c31;
   color: #ffb100;
   padding: 4px 15px;
-  border-radius: 15px 5px;
+  border-radius: 15px 5px; */
 }
 
 .dark .hero--personal--name--style{
@@ -327,6 +340,7 @@ main.dark {
   font-family: 'Lobster Two', cursive;
 }
 
+
 .dark .about--me--title,
 .dark .about--me--skills--title,
 .dark .project--title,
@@ -341,6 +355,7 @@ main.dark {
 
 .about--me--description {
   letter-spacing: 1px;
+  width: 90vw;
 }
 
 .dark .about--me--description {
@@ -355,14 +370,7 @@ main.dark {
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  filter: blur(4px);
-  transition: all 0.7s linear;
-
-}
-
-.about--me--photo:hover{
-  filter: none;
-  transform: scale(1.1);
+  margin-top: 100px;
 }
 
 .about--me--skill--icons {
@@ -542,33 +550,40 @@ main.dark {
 .contact--form--btn {
   width: 25%;
   height: 40px;
-  background-color: #212c31;
+  /* background-color: #212c31; */
+  background: linear-gradient(to left, #212c31 50%, #ffb100 50%) right;
+  background-size: 200%;
   color: #ffb100;
   border: none;
   font-size: 1.2rem;
   letter-spacing: 2px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-top: 20px;
-  transition: all 1s;
+  transition: all 1s ease-out;
   font-family: 'Oswald', sans-serif;
+  text-transform: lowercase;
 }
 
 .contact--form--btn:hover{
-  background-color: #ffb100;
+  /* background-color: #ffb100; */
+  background-position: left;
   color: #212c31;
   letter-spacing: 4px;
   font-weight: 700;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .dark .contact--form--btn{
-  /* background-color: #e3edf7 ; */
-  background-color: #a0f9ff ;
+  background: linear-gradient(to left, #a0f9ff 50%, #ffb100 50%) right;
+  background-size: 200%;
+  /* background-color: #a0f9ff ; */
   color: #212c31;
 }
 
 .dark .contact--form--btn:hover{
-  background-color: #ffb100;
+  background-position: left;
+  /* background-color: #ffb100; */
 }
 
 .footer--section {
@@ -600,17 +615,40 @@ main.dark {
 .footer--contact--components li a {
   color: #212c31;
   text-decoration: none;
-  line-height: 25px;
+  line-height: 30px;
+  display: inline-block;
+  position: relative;
+  transition: all 0.8s ease-in-out;
+  letter-spacing: 3px;
 }
+
+.footer--nav--components li a::after,
+.footer--contact--components li a::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #212c31;
+  transform-origin: bottom left;
+  transition: all 0.5s ease-in-out;
+}
+
 .footer--nav--components li a:hover,
 .footer--contact--components li a:hover{
-  background-color: #212c31;
-  color: #ffb100;
+  background-color: #ffb100;
+}
+
+.footer--nav--components li a:hover:after,
+.footer--contact--components li a:hover:after{
+  transform: scaleX(1);
+  transform-style: bottom right;
 }
 
 .dark .footer--nav--components li a,
 .dark .footer--contact--components li a {
-  /* color: #e3edf7 ; */
   color: #a0f9ff ;
 }
 
@@ -620,7 +658,12 @@ main.dark {
  color: #212c31;
 }
 
-
+.dark .footer--nav--components li a:hover:after,
+.dark .footer--contact--components li a:hover:after{
+  background-color: #a0f9ff ;
+  transform: scaleX(1);
+  transform-style: bottom right;
+}
 
 .icon--bar{
   display: flex;
@@ -720,22 +763,6 @@ circle{
     padding-left: 50px;
   }
 
-
-  /* ul {
-    display: flex;
-    list-style-type: none;
-    padding-right: 15px;
-    margin: 0;
-  }
-
-  ul li {
-    padding: 0 10px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    font-weight: 700;
-    color: #212c31;
-  } */
-
   ul.light,
   ul.dark{
     flex-direction: row;
@@ -744,6 +771,7 @@ circle{
 
   .nav--menu{
     margin: 0 15px;
+    letter-spacing: 3px;
   }
 
   .dark ul li {
@@ -760,18 +788,24 @@ circle{
   }
 
   .hero--personal{
-    justify-content: left;
+    justify-content: space-between;
   }
 
   .hero--personal--info{
     padding-left: 150px;
   }
   .hero--personal--contact{
-    padding-left: 200px;
+    padding-right: 250px;
   }
 
   .hero--personal--btn{
   margin-top: 20px;
+  }
+
+  .about--me--title,
+  .about--me--skills--title,
+  .project--title {
+  padding-top: 100px;
   }
   
   .fa-facebook-square,
@@ -791,6 +825,15 @@ circle{
     font-size: 1.3rem;
     max-width: 700px;
   }
+  .about--me--photo{
+    filter: blur(4px);
+    transition: all 0.7s linear;
+  }
+  .about--me--photo:hover{
+    filter: none;
+    transform: scale(1.1);
+  }
+
   .icon--bar--duo{
     width: 300px;
     justify-content: space-evenly;
@@ -800,6 +843,36 @@ circle{
   }
   .footer--contact--info{
     padding-right: 50px;
+  }
+  .Typewriter{
+    display: inline-block;
+    margin-left: 15px;
+    background-color: #212c31;
+    color: #ffb100;
+    padding: 4px 15px;
+    border-radius: 15px 5px;
+  }
+  .dark .Typewriter{
+    background-color: #ffb100;
+    color: #212c31;
+  }
+}
+
+@keyframes typing {
+  75%,
+  100% {
+    max-width: calc(var(--characters) * 1ch);
+  }
+}
+
+@keyframes blink {
+  0%,
+  75%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
   }
 }
 
