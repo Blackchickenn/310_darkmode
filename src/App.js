@@ -20,12 +20,6 @@ export default function App(){
         setBurgerMenu(prevBurgerMenu => !prevBurgerMenu)
     }
 
-    // const typeWriter = document.getElementById('typewriter-text');
-    // const text = 'Ivanka Madajova';
-    
-    // typeWriter.innerHTML = text;
-    // typeWriter.style.setProperty('--characters', text.length);
-
     return (
             <div>
                 <Navbar 

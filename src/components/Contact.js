@@ -31,7 +31,6 @@ export default function Contact (props){
         <section className={props.darkMode ? "dark" : ""}>
             <div className="contact--section">
                 <h2 className="contact--title" id="contact">Contact me</h2>
-                <p className="example--contact--title">Example</p>
                 <form ref={refForm} onSubmit={sendEmail} className="contact--form">
                     <div className="input--form--name--email">
                         <input type="text" name="name" placeholder="Name" required className="contact--form--name"/>
