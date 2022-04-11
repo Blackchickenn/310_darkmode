@@ -6,9 +6,7 @@ export default function Navbar(props){
     return(
         <nav className={props.darkMode ? "dark" : ""}>
                 <a href="https://www.w3schools.com" className={props.burgerMenu ? "nav--logo" : "no--nav--logo"} id="logo"><img src={LogoPicture}  alt="nav-logo"/></a>
-                {/* <img src={LogoPicture} className={props.burgerMenu ? "nav--logo" : "no--nav--logo"} alt="nav-logo"/> */}
                 <a href="https://www.w3schools.com" className={props.burgerMenu ? "nav--logo--dark" : "no--nav--logo--dark"} id="logo-dark"><img src={LogoPictureDark}  alt="nav-logo"/></a>
-                {/* <img src={LogoPictureDark} className={props.burgerMenu ? "nav--logo--dark" : "no--nav--logo--dark"} alt="nav-logo"/> */}
                 
             <div className={props.burgerMenu ? "burger" : "cross"}>
                 <ul className={props.darkMode ? "dark" : "light"}>

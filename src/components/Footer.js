@@ -10,7 +10,7 @@ export default function Footer(props){
                             <a href=".html#logo">Home</a>
                         </li>
                         <li>
-                            <a href="http://example.com#aboutme">About Me</a>
+                            <a href=".html#aboutme">About Me</a>
                         </li>
                         <li>
                             <a href=".html#skills">Skills</a>

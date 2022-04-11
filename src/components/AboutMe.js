@@ -14,10 +14,10 @@ export default function AboutMe(props){
                     <div className="about--me--section--info">
                         <div className="about--me--main">
                             <p className="about--me--title" id="aboutme">About Me</p>    
-                            <p className="about--me--description">Cupcake ipsum dolor sit amet macaroon jelly-o. Pie cupcake cupcake icing brownie tiramisu chocolate jelly. Halvah cotton candy cake cupcake jelly chupa chups pie toffee bear claw. Tootsie roll danish chupa chups powder croissant. 
+                            <p className="about--me--description">Hi there, my name is Marcel and I graduated as mechanical engineer. As a mechanical engineer I designed welding tools for car lights or machines for manufacturing lithium-ion batteries for cell-phones, laptops or cars.
                             <br></br>
                             <br></br>
-                            Cupcake ipsum dolor sit amet candy canes. Cotton candy chocolate bar lemon drops pie lemon drops danish pudding. Gummi bears lollipop cake toffee lemon drops sesame snaps.
+                            As a big enthusiast of an engineering but web develompent aswell I decided after over one decade as mechanical engineer try web develompent. My favourite area is FrontEnd develompent and everything around (and still learning) ReacJS. Aswell a huge fan of sport, food and technologies.
                             </p>
                         </div>
                         <img src={MMProfile} alt="profile-photo" className="about--me--photo"/>
