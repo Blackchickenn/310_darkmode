@@ -32,7 +32,7 @@ export default function Hero(props){
                                    
                                 </p>
                                 <p className="hero--personal--description">Ex-Mechanical Engineer || FrontEnd WebDeveloper </p>
-                                <a href=".html#contact"><button className="hero--personal--btn">Contact Me</button></a>   
+                                <a href="#contact"><button className="hero--personal--btn">Contact Me</button></a>   
                             </div>
                             <div className="hero--personal--contact">
                                     <a href="https://www.facebook.com" target="_blank"><FontAwesomeIcon icon={faFacebookSquare} /></a>

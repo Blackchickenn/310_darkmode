@@ -7,19 +7,19 @@ export default function Footer(props){
                 <div className="footer--nav--menu">
                     <ul className="footer--nav--components">
                         <li>
-                            <a href=".html#logo">Home</a>
+                            <a href="https://marcelmadaj.online">Home</a>
                         </li>
                         <li>
-                            <a href=".html#aboutme">About Me</a>
+                            <a href="#aboutme">About Me</a>
                         </li>
                         <li>
-                            <a href=".html#skills">Skills</a>
+                            <a href="#skills">Skills</a>
                         </li>
                         <li>
-                            <a href=".html#projects">Projects</a>
+                            <a href="#projects">Projects</a>
                         </li>
                         <li>
-                            <a href=".html#contact">Contact</a>
+                            <a href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>

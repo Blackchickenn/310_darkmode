@@ -3,8 +3,8 @@ body {
   font-family: 'Oswald', sans-serif;
   color: #212c31;
   box-sizing: border-box;
-  overflow-x: hidden;
-  
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
 }
 
 nav {
@@ -17,7 +17,7 @@ nav {
   width: 100vw;
   position: fixed;
   z-index: 1;
-  /* overflow: visible; */
+  overflow: visible;
 }
 
 nav.dark {
@@ -76,7 +76,6 @@ ul.dark {
 
 .nav--menu {
   padding: 5px;
-  font-size: 0.8rem;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
 }
@@ -190,8 +189,7 @@ main.dark {
 .hero--personal {
   display: flex;
   flex-direction: column;
-  padding: 15px 20px 30px 20px;
-  justify-content: space-between;
+  padding-top: 20px;
   width: 100vw;
 }
 
@@ -204,6 +202,7 @@ main.dark {
   display: flex;
   flex-direction: column;
   align-items: left;
+  padding-left: 20px;
 }
 
 .Typewriter{
@@ -226,6 +225,10 @@ main.dark {
   color: #212c31;
 }
 
+.hero--personal--description{
+  padding-left: 20px;
+}
+
 .dark .hero--personal--name,
 .dark .hero--personal--description{
   color: #a0f9ff;
@@ -234,7 +237,8 @@ main.dark {
 .hero--personal--description,
 .about--me--description {
   font-size: 1.2rem;
-  max-width: 400px;
+  /* padding-left: 20px; */
+  /* max-width: 400px; */
   margin: 20px 0;
 }
 
@@ -250,6 +254,7 @@ main.dark {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   font-family: 'Oswald', sans-serif;
   transition: all 1s linear;
+  margin-left: 20px;
 }
 
 .hero--personal--btn:hover{
@@ -271,6 +276,7 @@ main.dark {
 
 .hero--personal--contact {
   padding-top: 20px;
+  padding-left: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -313,6 +319,7 @@ main.dark {
   margin-top: 0;
   letter-spacing: 2px;
   font-family: 'Lobster Two', cursive;
+  padding-top: 30px;
 }
 
 
@@ -700,7 +707,7 @@ circle{
   ul.light,
   ul.dark{
     flex-direction: row;
-    padding-right: 50px;
+    /* padding-right: 50px; */
   }
 
   .nav--menu{
